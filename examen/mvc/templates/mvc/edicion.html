@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Departamento</title>
+</head>
+<body bgcolor="#99CC99">
+<form method="post" action="editardeptexe">
+    {% csrf_token %}
+     <h1>Editar datos de un departamento</h1>
+    <table>
+        {% for dptn, nom, loc in datos_dept %}
+        <tr>
+            <td>Número departamento:</td>
+            <td><input type="text" name="dptnum" value="{{dptn}}"></td>
+        </tr>
+        <tr>
+            <td>Nombre:</td>
+            <td><input type="text" name="nom" value="{{nom}}"></td>
+        </tr>
+         <tr>
+            <td>Localización:</td>
+            <td><input type="text" name="loc" value="{{loc}}"></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <input type="SUBMIT" value="Editar">
+</form>
+</body>
+</html>

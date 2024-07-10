@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVC</title>
+</head>
+<body bgcolor="#99CC99">
+    <h1>DEPARTAMENTOS</h1>
+    <form method="post" action="seleccion">
+    <table border="0" style="width:30%">
+        <tr>
+            <th style="text-align:left">DeptNO</th>
+            <th style="text-align:left">Nombre</th>
+            <th style="text-align:left">Localización</th>
+            <th style="text-align:left">Acciones</th>
+        </tr>
+        {% for dptn, nom, loc in lista_dept %}
+        <tr>
+            <td>{{dptn}}</td>
+            <td>{{nom}}</td>
+            <td>{{loc}}</td>
+            <td><a href="borrardept?dptnum={{dptn}}"> Borrar</a>  <a href="toeditardept?dptnum={{dptn}}">Editar</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+    <br/>
+    <a href="toaltadept">Nuevo</a>
+</body>
+</html>

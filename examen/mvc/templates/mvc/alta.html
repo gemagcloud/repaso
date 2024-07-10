@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alta Departamento</title>
+</head>
+<body bgcolor="#99CC99">
+<form method="post" action="altadeptexe">
+    {% csrf_token %}
+    <h1>Agregar un nuevo departamento</h1>
+    <table>
+        <tr>
+            <td>Número departamento:</td>
+            <td><input type="text" name="dptnum" value=""></td>
+        </tr>
+        <tr>
+            <td>Nombre:</td>
+            <td><input type="text" name="nom" value=""></td>
+        </tr>
+         <tr>
+            <td>Localización:</td>
+            <td><input type="text" name="loc" value=""></td>
+        </tr>
+    </table>
+    <input type="SUBMIT" value="Insertar">
+</form>
+</body>
+</html>
